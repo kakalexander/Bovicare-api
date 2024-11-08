@@ -2,19 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Bovicare</title>
-    <style>
-        ul {
-            list-style: none;
-        }
-        ul li {
-            display: flex;
-            align-items: center;
-        }
-        ul li img {
-            margin-right: 10px;
-        }
-    </style>
 </head>
 <body>
     <h1>Bovicare</h1>
