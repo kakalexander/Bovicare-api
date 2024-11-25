@@ -3,14 +3,11 @@ version: "3.9"
 services:
   flask_app:
     container_name: flask_app
-    image: dockerhub-flask_live_app:1.0.0
-    build: 
+    build:
       context: ./bovicare-api
       dockerfile: Dockerfile
     ports:
       - "4000:4000"
-    volumes:
-      - ./bovicare-api:/app
     environment:
       - FLASK_APP=app.py
       - DB_URL=postgresql://postgres:postgres@flask_db:5432/bovicare
@@ -20,7 +17,7 @@ services:
   frontend:
     container_name: react_frontend
     build:
-      context: ./bovicare-web
+      context: ./Bovicare-web
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
@@ -43,7 +40,7 @@ services:
     container_name: pgadmin
     image: dpage/pgadmin4:latest
     ports:
-      - "5050:80"  # Acesse o pgAdmin via http://localhost:5050
+      - "5050:80"
     environment:
       - PGADMIN_DEFAULT_EMAIL=kauanalexander123@hotmail.com
       - PGADMIN_DEFAULT_PASSWORD=postgres

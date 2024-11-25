@@ -1,4 +1,6 @@
-flask
-flask_cors
-psycopg2-binary
+Flask
 Flask-SQLAlchemy
+Flask-Cors
+python-dotenv
+psycopg2-binary
+werkzeug
